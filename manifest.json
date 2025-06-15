@@ -16,11 +16,15 @@
    "content_scripts": [
      {
        "matches": ["*://*.myntra.com/*", "*://*.savana.com/*"],
-       "js": ["content.js"]
+       "js": ["color-thief.min.js", "content.js"]
      }
    ],
    "icons": {
      "48": "icons/icon.png"
-   }
+   },
+   "content_security_policy": {
+  "extension_pages": "script-src 'self'; object-src 'self'"
+}
+
  }
  
